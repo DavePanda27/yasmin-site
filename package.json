@@ -1,0 +1,15 @@
+{
+  "name": "yasmin-site",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "dev": "wrangler dev",
+    "check": "wrangler deploy --dry-run",
+    "test": "node --experimental-sqlite tests/bookings.mjs",
+    "db:local": "wrangler d1 migrations apply DB --local"
+  },
+  "devDependencies": { "wrangler": "4.135.0" },
+  "engines": { "node": ">=22.13.0" }
+}
+

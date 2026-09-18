@@ -350,7 +350,27 @@ body{
 <div class="review-card reveal"><h3>Google</h3><div style="font:42px Georgia,serif">5,0</div><div class="stars">★★★★★</div><p>3 opinie</p><a class="review-link" target="_blank" href="https://www.google.com/maps/search/?api=1&query=Atelier+Pi%C4%99kna+Cia%C5%82a+i+Umys%C5%82u+Yasmin+Tarn%C3%B3w">Zobacz opinie →</a></div>
 </div>
 </section>
-<section id="kontakt" style="background:#efe2cf">
+<link rel="stylesheet" href="/booking.css">
+<section id="kontakt" class="booking-section">
+<div class="booking-layout">
+<div><div class="kicker">Zarezerwuj chwilę dla siebie</div><h2>Umów wizytę w Yasmin.</h2><p>Codziennie, 10:00–21:30.<br>Każdy zabieg kończy się najpóźniej o 21:30. Między wizytami zachowujemy godzinę przerwy.</p><p>Wybierz masaż i wolną godzinę. Zgłoszenie czeka na akceptację — zadzwonimy, aby potwierdzić wizytę.</p><p>Wolisz porozmawiać?<br><a href="tel:+48697946177">697 946 177</a></p></div>
+<form id="booking-form" class="booking-form">
+<label class="full">Masaż<select name="service" required disabled><option value="">Ładowanie usług…</option></select></label>
+<label>Dzień<input name="date" type="date" required disabled></label>
+<label>Godzina<select name="time" required disabled><option value="">Wybierz usługę i dzień</option></select></label>
+<label>Imię<input name="name" autocomplete="given-name" minlength="2" maxlength="100" required></label>
+<label>Telefon<input name="phone" type="tel" autocomplete="tel" maxlength="25" required></label>
+<label class="full">E-mail (opcjonalnie)<input name="email" type="email" autocomplete="email" maxlength="254"></label>
+<label class="trap" aria-hidden="true">Strona internetowa<input name="website" tabindex="-1" autocomplete="off"></label>
+<label class="full consent"><input name="consent" type="checkbox" required><span>Proszę o kontakt w sprawie tej wizyty. Rozumiem, że zgłoszenie wymaga potwierdzenia przez Yasmin.</span></label>
+<p class="full booking-privacy">Podane dane posłużą do obsługi zgłoszenia i kontaktu w sprawie wizyty. Nie wpisuj informacji o stanie zdrowia.</p>
+<button class="btn gold full" type="submit" disabled>Wyślij zgłoszenie rezerwacji →</button>
+<p id="booking-message" class="full" role="status" aria-live="polite" tabindex="-1">Ładowanie rezerwacji…</p>
+<noscript>Do rezerwacji online potrzebny jest JavaScript. Zadzwoń: 697 946 177.</noscript>
+</form></div>
+</section>
+<script type="module" src="/booking.js"></script>
+<section id="materialy" style="background:#efe2cf">
 <div class="servicesHeader reveal"><div class="kicker">Materiały promocyjne</div><h2>Voucher, ulotka i wizytówka</h2><p>Materiały w tej samej stylistyce marki.</p></div>
 <div class="promo-grid">
 <div class="promo-card reveal"><img src="assets/images/spa-aromatherapy.webp" alt="Voucher Yasmin"><h3>Voucher</h3></div>
@@ -365,3 +385,4 @@ addEventListener('scroll',()=>{let h=document.documentElement;document.querySele
 </script>
 
 </body></html>
+
